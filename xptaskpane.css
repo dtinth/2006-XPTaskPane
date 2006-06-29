@@ -1,0 +1,54 @@
+.xtpTitle {
+	background: url(xtp-p.gif) bottom center no-repeat;
+	width: 185px;
+	height: 25px;
+	padding-left: 16px;
+	text-align: left;
+	color: #215DC6;
+	font: bold 8pt Tahoma, sans-serif;
+	cursor: pointer;
+}
+.xtpBtnUp, .xtpBtnUp:link, .xtpBtnUp:visited, .xtpBtnUp:hover {
+	display: block;
+	background: url(xtp-pup.gif);
+	position: absolute;
+	left: 162px;
+	top: 2px;
+	width: 19px;
+	height: 19px;
+	background-position: 0px 0px;
+}
+.xtpBtnUp:hover {
+	background-position: 0px -19px;
+}
+.xtpBtnDn, .xtpBtnDn:link, .xtpBtnDn:visited, .xtpBtnDn:hover {
+	display: block;
+	background: url(xtp-pdn.gif);
+	position: absolute;
+	left: 162px;
+	top: 2px;
+	width: 19px;
+	height: 19px;
+	background-position: 0px 0px;
+}
+.xtpBtnDn:hover {
+	background-position: 0px -19px;
+}
+.xtpBody {
+	background: #D6DFF7;
+	color: black;
+	border: 1px solid white;
+	border-top-width: 0px;
+	padding: 8px;
+	font: 8pt Tahoma, sans-serif;
+	text-align: left;
+	cursor: default;
+}
+
+.xtpBody a, .xtpBody a:link, .xtpBody a:visited {
+	color: #215DC6;
+	text-decoration: none;
+}
+.xtpBody a:hover {
+	text-decoration: underline;
+}

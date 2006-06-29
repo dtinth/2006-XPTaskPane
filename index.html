@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" href="xptaskpane.css" />
+</head>
+
+<body>
+
+
+<!-- Header -->
+<h1>XP Task Pane</h1>
+<i>Really simple name, isn't it?</i>
+<br/>
+<br/>
+
+<!-- Features -->
+<h2 id="features">Features</h2>
+<p>
+This program makes a XP task pane like the one you see at the left.<br/>
+If you don't see it, please be sure that JavaScript is enabled.<br/>
+</p>
+
+
+<!-- Downloads -->
+<h2 id="downloads">Downloads</h2>
+<p>
+Here is the download: <a href="xptaskpane.zip">Version 1.0.2</a><br/>
+</p>
+
+
+<!-- Usage -->
+<h2 id="usage">Usage</h2>
+
+<!-- || Download and Extract -->
+<p>
+1. After you download the ZIP file, extract it into a folder on your website.<br/>
+</p>
+
+<!-- || Head -->
+<p>
+2. Put this code in the head section:<br/>
+
+<!-- || || Head Code -->
+<code><span style="color: navy">&lt;link rel=</span><span style="color: blue">"stylesheet"</span><span style="color: navy"> href=</span><span style="color: blue">"xptaskpane.css"</span><span style="color: navy"> /&gt;</span></code>
+</p>
+
+<!-- || Body -->
+<p>
+3. Put this code in the body section: <br/>
+
+<!-- || || Body Code -->
+<code><span style="color: brown">&lt;script type=</span><span style="color: blue">"text/javascript"</span><span style="color: brown"> src=</span><span style="color: blue">"xptaskpane.js"</span><span style="color: brown">&gt;&lt;/script&gt;</span><br/>
+<span style="color: brown">&lt;script type=</span><span style="color: blue">"text/javascript"</span><span style="color: brown">&gt;<br/>
+</span><span style="color: green">// &lt;![CDATA[<br/>
+</span><span style="color: navy"><b>var</b></span><span style="color: black"> pane1 = </span><span style="color: navy"><b>new </b></span><span style="color: black">XTPWindow(</span><span style="color: blue">'Title Text'</span><span style="color: black">, </span><span style="color: blue">'Contents -- Can have HTML tags in it.'</span><span style="color: black">);<br/>
+</span><span style="color: green">// You can insert links and make a navigation bar with this!<br/>
+// ]]&gt;<br/>
+</span><span style="color: brown">&lt;/script&gt;</span>
+</code>
+</p>
+
+
+<!-- Things to Try -->
+<h2 id="try">Things to Try!</h2>
+<p>
+<a href="javascript:void (new XTPWindow('Greetings', 'Hi! I am the newly-created window.'));">Create a new window</a><br/>
+<a href="javascript:wnd3.setInnerHTML('The content has been changed. As you see, the window will resize itself to fit the contents in it.<br /><br />Yo!');">Change the content of "For Testing" window</a><br/>
+<a href="javascript:wnd3.hide();">Hide the "For Testing" window</a><br/>
+<a href="javascript:wnd3.show();">Show the "For Testing" window</a><br/>
+<a href="javascript:wnd3.collapse();">Collapse the "For Testing" window</a><br/>
+<a href="javascript:wnd3.expand();">Expand the "For Testing" window</a>
+</p>
+
+
+<!-- Object Members -->
+<h2 id="objr">Object Members</h2>
+<p>
+<b>bodyNode</b> - Reference to the body node.<br/>
+<b>collapse ()</b> - Collapses the content in the window.<br/>
+<b>expand ()</b> - Expands the content in the window.<br/>
+<b>hide ()</b> - Hides the window.<br/>
+<b>setInnerHTML (<i>sContent</i>)</b> - Sets the content's HTML and updates its height.<br/>
+<b>setTitleHTML (<i>sContent</i>)</b> - Sets the title's HTML.<br/>
+<b>show ()</b> - Shows the window.<br/>
+<b>updateHeight ()</b> - Updates it's height to fit the content in it.<br/>
+</p>
+
+
+<!-- Menu -->
+<ul id="menu">
+	<li><a href="#features">Features</a></li>
+	<li><a href="#downloads">Downloads</a></li>
+	<li><a href="#usage">Usage</a></li>
+	<li><a href="#try">Things to Try!</a></li>
+	<li><a href="#objr">Object Members</a></li>
+</ul>
+
+
+<script type="text/javascript" src="xptaskpane.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var wnd1 = new XTPWindow('XPTaskPane 1.0', 'This program makes a XP task pane like this.');
+document.getElementById('menu').style.display = 'none';
+var ghtml = '';
+for (i = 0; i < document.getElementById('menu').childNodes.length; i ++) {
+	if (document.getElementById('menu').childNodes[i].nodeName.toLowerCase() == 'li')
+		ghtml += '&bull;&nbsp;&nbsp;' + document.getElementById('menu').childNodes[i].innerHTML + '<br />';
+}
+var wnd2 = new XTPWindow('Main Menu', ghtml);
+var wnd3 = new XTPWindow('For Testing', '...');
+// ]]>
+</script>
+
+</body>
+</html>
